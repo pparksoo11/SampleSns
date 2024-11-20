@@ -1,6 +1,8 @@
 plugins {
-    alias(libs.plugins.android.library)
-    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.com.android.library)
+    alias(libs.plugins.org.jetbrains.kotlin.android)
+    id("kotlin-kapt") //kapt가 적용되어야 hilt가 정상적으로 작동한다. (hilt가 java로 작성되었기 때문)
+    alias(libs.plugins.hilt)
 }
 
 android {
@@ -30,16 +32,38 @@ android {
     kotlinOptions {
         jvmTarget = "17"
     }
+
+    buildFeatures{
+        compose = true
+    }
+
+    composeOptions{
+        kotlinCompilerExtensionVersion="1.4.3"
+    }
 }
 
 dependencies {
 
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
+    implementation(libs.appcompat)
+    implementation(libs.core.ktx)
+    implementation(libs.lifecycle.runtime.ktx)
+    implementation(libs.activity.compose)
+    implementation(platform(libs.compose.bom))
+    implementation(libs.ui)
+    implementation(libs.ui.graphics)
+    implementation(libs.ui.tooling.preview)
+    implementation(libs.material3)
     testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
+    androidTestImplementation(libs.androidx.test.ext.junit)
+    androidTestImplementation(libs.espresso.core)
+    androidTestImplementation(platform(libs.compose.bom))
+    androidTestImplementation(libs.ui.test.junit4)
+    debugImplementation(libs.ui.tooling)
+    debugImplementation(libs.ui.test.manifest)
+
+    // hilt
+    implementation(libs.hilt)
+    kapt(libs.hilt.compiler)
 
     implementation(project(":domain"))
 }

@@ -2,7 +2,8 @@ plugins {
     alias(libs.plugins.com.android.application)
     alias(libs.plugins.org.jetbrains.kotlin.android)
     alias(libs.plugins.kotlin.serialization)
-    alias(libs.plugins.fastcampus.hilt)
+    id("kotlin-kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -84,8 +85,8 @@ dependencies {
     implementation(libs.okhttp)
 
     // for instrumentation tests
-    androidTestImplementation("com.google.dagger:hilt-android-testing:2.48.1")
-    kaptAndroidTest("com.google.dagger:hilt-compiler:2.48.1")
+    androidTestImplementation(libs.hilt)
+    kapt(libs.hilt.compiler)
 
     // for Local unit tests
     testImplementation("com.google.dagger:hilt-android-testing:2.48.1")
