@@ -1,9 +1,9 @@
-package theme
+package com.example.samplesns.presentation.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
-import com.example.presentation.R
+import com.example.samplesns.presentation.R
 
 private val pretendardFontFamily = FontFamily(Font(R.font.pretendard))
 private val defaultTypography = Typography()

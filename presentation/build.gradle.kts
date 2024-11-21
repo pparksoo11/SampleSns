@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.presentation"
+    namespace = "com.example.samplesns.presentation"
     compileSdk = 34
 
     defaultConfig {
