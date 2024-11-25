@@ -1,4 +1,4 @@
-package theme
+package com.example.samplesns.presentation.theme
 
 import android.app.Activity
 import androidx.compose.foundation.isSystemInDarkTheme
@@ -18,12 +18,12 @@ private val ColorScheme = lightColorScheme(
     onPrimaryContainer = Color.White,
     surface = Color.Black,
     onSurface = Color.White,
-    background = Color.Black,
+    background = background,
     onBackground = Color.White
 )
 
 @Composable
-fun FastcampusSNSTheme(
+fun SampleSNSTheme(
     content: @Composable () -> Unit
 ) {
     val darkTheme: Boolean = isSystemInDarkTheme()
