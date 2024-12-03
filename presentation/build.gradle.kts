@@ -66,5 +66,9 @@ dependencies {
     implementation(libs.hilt)
     kapt(libs.hilt.compiler)
 
+    //naavigation
+    implementation(libs.navigation.compose)
+    implementation(libs.hilt.navigation.compose)
+
     implementation(project(":domain"))
 }
