@@ -25,15 +25,15 @@ fun LoginNavHost() {
         }
         composable(route = LoginRoute.SignUpScreen.name) {
             SignUpScreen(
-                id = TODO(),
-                username = TODO(),
-                password1 = TODO(),
-                password2 = TODO(),
-                onIdChange = TODO(),
-                onUsernameChange = TODO(),
-                onPassword1Change = TODO(),
-                onPassword2Change = TODO(),
-                onSignUpClick = TODO()
+                id = "sampleId",
+                username = "sampleName",
+                password1 = "samplePassword",
+                password2 = "samplePassword",
+                onIdChange = {},
+                onUsernameChange = {},
+                onPassword1Change = {},
+                onPassword2Change = {},
+                onSignUpClick = {}
             )
         }
     }
