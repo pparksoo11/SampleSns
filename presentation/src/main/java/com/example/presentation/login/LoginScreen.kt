@@ -14,12 +14,15 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.presentation.component.FCButton
 import com.example.presentation.component.FCTextField
 import com.example.presentation.theme.SampleSNSTheme
+import org.orbitmvi.orbit.compose.collectAsState
+
 /**
  * @author soohwan.ok
  */
@@ -27,11 +30,12 @@ import com.example.presentation.theme.SampleSNSTheme
 fun LoginScreen(
     viewModel: LoginViewModel = hiltViewModel()
 ) {
+    val state = viewModel.collectAsState().value
     LoginScreen(
-        id = "",
-        password = "",
-        onIdChange = {},
-        onPasswordChange = {},
+        id = state.id,
+        password = state.password,
+        onIdChange = viewModel::onIdChange,
+        onPasswordChange = viewModel::onPasswordChange,
         onNavigateToSignUpScreen = viewModel::onLoginClick
     )
 }
@@ -95,6 +99,7 @@ private fun LoginScreen(
                         .padding(top = 8.dp)
                         .fillMaxWidth(),
                     value = password,
+                    visualTransformation = PasswordVisualTransformation(),
                     onValueChange = onPasswordChange,
                 )
                 FCButton(
