@@ -1,4 +1,4 @@
-package com.example.samplesns.presentation.login
+package com.example.presentation.login
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost

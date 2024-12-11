@@ -1,8 +1,8 @@
-package com.example.samplesns.presentation.login
+package com.example.presentation.login
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.sample.samplesns.domain.usecase.login.LoginUseCase
+import com.example.domain.login.LoginUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject

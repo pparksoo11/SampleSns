@@ -1,4 +1,4 @@
-package com.sample.samplesns.domain.usecase.login
+package com.example.domain.login
 
 interface LoginUseCase {
 

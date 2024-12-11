@@ -1,4 +1,4 @@
-package com.example.samplesns.presentation.login
+package com.example.presentation.login
 
 sealed class LoginRoute(
     val name: String

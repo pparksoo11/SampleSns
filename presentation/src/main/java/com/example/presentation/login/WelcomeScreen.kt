@@ -1,4 +1,4 @@
-package com.example.samplesns.presentation.login
+package com.example.presentation.login
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -17,8 +17,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.samplesns.presentation.component.FCButton
-import com.example.samplesns.presentation.theme.SampleSNSTheme
+import com.example.presentation.component.FCButton
+import com.example.presentation.theme.SampleSNSTheme
 
 @Composable
 fun WelcomeScreen(
