@@ -1,4 +1,4 @@
-package com.example.samplesns.presentation.theme
+package com.example.presentation.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.font.Font

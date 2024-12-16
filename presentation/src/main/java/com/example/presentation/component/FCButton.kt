@@ -1,4 +1,4 @@
-package com.example.samplesns.presentation.component
+package com.example.presentation.component
 
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.shape.RoundedCornerShape
